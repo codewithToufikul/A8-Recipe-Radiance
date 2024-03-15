@@ -1,10 +1,13 @@
 import './App.css'
+import Navbar from './component/Navbar/Navbar'
+import Banner from './component/Banner/Banner'
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <Navbar></Navbar>
+      <Banner></Banner>
      </>
   )
 }
