@@ -3,7 +3,6 @@ import {faClock} from '@fortawesome/free-regular-svg-icons';
 import Fire from '../../images/fire.png'
 
 const Recipes = ({recipe, handleRecipe}) => {
-    console.log(recipe);
     const {recipe_name, short_description, ingredients, preparing_time, calories, recipe_image} = recipe
     return (
         <div>
@@ -26,7 +25,7 @@ const Recipes = ({recipe, handleRecipe}) => {
                     </div>
                     <div className='flex items-center gap-1'>
                         <img src={Fire} alt="" />
-                        <p className='text-lg'>{calories}</p>
+                        <p className='text-lg'>{calories} Calories</p>
                     </div>
                 </div>
                 </div>

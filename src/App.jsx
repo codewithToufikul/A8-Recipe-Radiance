@@ -11,10 +11,13 @@ import Cooking from './component/Cooking/Cooking'
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [recipeItem, setRecipeItem] = useState([]);
+  const [recipeCooking, setRecipeCooking] = useState([]);
+  const [times, setTime] = useState(0);
+  const [recipeCalories, setRecipeCalories] = useState(0)
 
 
   useEffect(()=>{
-    fetch('recipe.json')
+    fetch('./recipe.json')
     .then(res => res.json())
     .then(data => setRecipes(data))
   },[])
@@ -26,8 +29,23 @@ function App() {
       setRecipeItem([...recipeItem, recipe]);
     }
     else{
-      toast("Wow so easy !")
+      toast("Already Exist  !")
     }
+    
+    
+  }
+  const handleCurentlyCooking = (recipe, id, time, calories) =>{
+    const newRecipeCooking = [...recipeCooking, recipe];
+    setRecipeCooking(newRecipeCooking)
+    const newItem = recipeItem.filter(item => item.recipe_id !== id);
+    setRecipeItem(newItem);
+    const cookTime = parseInt(time)
+    const newTimes = (times + cookTime);
+    setTime(newTimes)
+    const cookCalo = parseInt(calories)
+    const newCalories = (recipeCalories + cookCalo);
+    setRecipeCalories(newCalories)
+    
     
   }
 
@@ -50,7 +68,7 @@ function App() {
         </div>
         </div>
         <div className='col-span-2 m-3 ml-4'>
-          <Cooking recipeItem={recipeItem}></Cooking>
+          <Cooking recipeItem={recipeItem} handleCurentlyCooking={handleCurentlyCooking} recipeCooking={recipeCooking} times={times} recipeCalories={recipeCalories}></Cooking>
         </div>
       </div>
       <ToastContainer />
