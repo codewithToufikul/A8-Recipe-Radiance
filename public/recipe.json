@@ -55,33 +55,6 @@
       "recipe_image": "https://i.ibb.co/n0LZbkj/Rectangle-20170.png"
     },
     {
-      "recipe_id": 5,
-      "recipe_name": "Ginger Basil Chicken Stir Fry",
-      "short_description": "Add grated ginger while cooking for a zesty and aromatic flavor.",
-      "ingredients": [
-        "250 g chicken breast, sliced",
-        "130 ml soy sauce",
-        "200 g basil leaves"
-      ],
-      "preparing_time": "40",
-      "calories": "420",
-      "recipe_image": "https://i.ibb.co/n0LZbkj/Rectangle-20170.png"
-    },
-    {
-      "recipe_id": 6,
-      "recipe_name": "Teriyaki Basil Chicken Stir Fry",
-      "short_description": " Substitute soy sauce with teriyaki sauce for a sweeter and tangier flavor profile.",
-      "ingredients": [
-        "350 g chicken breast, sliced",
-        "280 ml teriyaki sauce",
-        "150 g basil leaves",
-        "300 g mushrooms, sliced"
-      ],
-      "preparing_time": "40",
-      "calories": "420",
-      "recipe_image": "https://i.ibb.co/ZMm7wgY/Rectangle-20170-1.png"
-    },
-    {
       "recipe_id": 7,
       "recipe_name": "Thai Basil Chicken Stir Fry",
       "short_description": "Use Thai basil leaves and Thai bird chilies for an authentic Thai taste.",
@@ -92,7 +65,7 @@
       ],
       "preparing_time": "20",
       "calories": "320",
-      "recipe_image": "https://i.ibb.co/5LvWx8G/ryan-kwok-Fhe-Bw4-Bf-Rp-Q-unsplash.jpg"
+      "recipe_image": "https://i.ibb.co/1nk6ZGN/nathandumlao-Ijov-Y65-WQi-Eunsplash300x200.jpg"
     },
     {
       "recipe_id": 8,
