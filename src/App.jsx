@@ -18,8 +18,15 @@ function App() {
   },[])
 
   const handleRecipe = (recipe) =>{
-    const cookDetails = [...recipeItem, recipe];
-    setRecipeItem(cookDetails);
+    // const cookDetails = [];
+    const isExid = recipeItem.find(cookDetail => cookDetail.recipe_id == recipe.recipe_id);
+    if(!isExid){
+      setRecipeItem([...recipeItem, recipe]);
+    }
+    else{
+      alert('NO')
+    }
+    
   }
 
   return (
