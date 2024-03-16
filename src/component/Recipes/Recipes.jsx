@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faClock} from '@fortawesome/free-regular-svg-icons';
 import Fire from '../../images/fire.png'
 
-const Recipes = ({recipe}) => {
+const Recipes = ({recipe, handleRecipe}) => {
     console.log(recipe);
     const {recipe_name, short_description, ingredients, preparing_time, calories, recipe_image} = recipe
     return (
@@ -31,7 +31,7 @@ const Recipes = ({recipe}) => {
                 </div>
                 </div>
                 <div className="card-actions">
-                <button className="btn bg-[#0BE58A] rounded-3xl px-4 text-base">Want to Cook</button>
+                <button onClick={()=>handleRecipe(recipe)} className="btn bg-[#0BE58A] rounded-3xl px-4 text-base">Want to Cook</button>
                 </div>
             </div>
             </div>

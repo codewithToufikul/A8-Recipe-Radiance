@@ -8,6 +8,7 @@ import Cooking from './component/Cooking/Cooking'
 
 function App() {
   const [recipes, setRecipes] = useState([]);
+  const [recipeItem, setRecipeItem] = useState([]);
 
 
   useEffect(()=>{
@@ -15,6 +16,11 @@ function App() {
     .then(res => res.json())
     .then(data => setRecipes(data))
   },[])
+
+  const handleRecipe = (recipe) =>{
+    const cookDetails = [...recipeItem, recipe];
+    setRecipeItem(cookDetails);
+  }
 
   return (
     <>
@@ -25,12 +31,16 @@ function App() {
         <div className='md:col-span-3'>
         <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
         {
-          recipes.map(recipe => <Recipes recipe={recipe}></Recipes> )
+          recipes.map(recipe => <Recipes 
+            key={recipe.id}
+            recipe={recipe} 
+            handleRecipe={handleRecipe}
+            ></Recipes> )
         }
         </div>
         </div>
         <div className='col-span-2 m-3 ml-4'>
-          <Cooking></Cooking>
+          <Cooking recipeItem={recipeItem}></Cooking>
         </div>
       </div>
      </>
