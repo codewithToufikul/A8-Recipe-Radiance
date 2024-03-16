@@ -1,3 +1,5 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 import Navbar from './component/Navbar/Navbar'
 import Banner from './component/Banner/Banner'
@@ -24,7 +26,7 @@ function App() {
       setRecipeItem([...recipeItem, recipe]);
     }
     else{
-      alert('NO')
+      toast("Wow so easy !")
     }
     
   }
@@ -43,6 +45,7 @@ function App() {
             recipe={recipe} 
             handleRecipe={handleRecipe}
             ></Recipes> )
+            
         }
         </div>
         </div>
@@ -50,6 +53,7 @@ function App() {
           <Cooking recipeItem={recipeItem}></Cooking>
         </div>
       </div>
+      <ToastContainer />
      </>
   )
 }
