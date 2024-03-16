@@ -26,9 +26,11 @@ const Cooking = ({recipeItem, handleCurentlyCooking, recipeCooking, times, recip
             {
                 recipeCooking.map((item, index) => <Cooked key={item.id} item={item} index={index}></Cooked>)
             }
-            <div>
-            <p className="text-center">time= {times}</p>
-            <p>Calories= {recipeCalories}</p>
+            <div className=" flex justify-end gap-10 px-8 py-5 text-lg">
+            <p className="">Total Time = <br />
+             {times} Minutes</p>
+            <p>Total Calories = <br />
+             {recipeCalories} Calories</p>
             </div>
         </div>
     );

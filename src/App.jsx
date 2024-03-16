@@ -54,9 +54,9 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <Title></Title>
-      <div className='grid md:grid-cols-5 grid-cols-1 mt-11'>
-        <div className='md:col-span-3'>
-        <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
+      <div className='grid lg:grid-cols-5 grid-cols-1 mt-11'>
+        <div className='lg:col-span-3 mx-2'>
+        <div className='grid lg:grid-cols-2 grid-cols-1 gap-8'>
         {
           recipes.map(recipe => <Recipes 
             key={recipe.id}
